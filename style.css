@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.board  {
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    outline: 1px solid #222;
+}
+
+.board > div {
+    border: 1px solid #ccc;
+} 
+
+#grid-size-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 8px 15px;
+}
