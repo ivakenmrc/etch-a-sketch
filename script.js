@@ -19,7 +19,7 @@ board.addEventListener("mouseover", (e) => {
 changeGridSizeButton.addEventListener("click" , () => { 
     do {
         gridSize = Number(prompt("Choose size between 2 - 100"));
-    } while (gridSize < 2 || gridSize > 100);
+    } while (isNaN(gridSize) || gridSize < 2 || gridSize > 100);
 
     updateGrid();
 })
@@ -33,7 +33,6 @@ function updateGrid() {
 
 
 function createGrid() {
-    
     for (let i = 0; i < gridSize ** 2; i++) {
         const div = document.createElement("div");
         div.style.width = boardWidth / gridSize + "px";
